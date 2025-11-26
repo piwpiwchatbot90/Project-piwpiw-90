@@ -43,14 +43,14 @@ module.exports = {
       const attachment = await global.utils.getStreamFromURL(response.data.image);
 
       await api.sendMessage(
-        { body: `🎨 | here's your draw image, Prompt: ${prompt}`, attachment },
+        { body: `🎨 | Piw Piw Chat Bot here's your draw image, Prompt: ${prompt}`, attachment },
         event.threadID,
         event.messageID
       );
 
     } catch (error) {
       console.error(error);
-      api.sendMessage("🥹error, contact MahMUD.", event.threadID, event.messageID);
+      api.sendMessage("🥹error, contact Gojo Orupe Piw Piw.", event.threadID, event.messageID);
     }
   }
 };
