@@ -60,7 +60,7 @@ module.exports = {
 
     } catch (error) {
       console.error(error);
-      api.sendMessage("🥹error, contact MahMUD.", event.threadID, event.messageID);
+      api.sendMessage("🥹error, contact Gojo Orupe Piw Piw.", event.threadID, event.messageID);
     }
   },
 
