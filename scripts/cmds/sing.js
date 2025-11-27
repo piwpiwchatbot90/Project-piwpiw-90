@@ -23,7 +23,7 @@ module.exports = {
     }
     
     if (!args[0]) {
-      return message.reply("❌ | Please provide a song name.\n\nExample: sing shape of you");
+      return message.reply("❌ | Piw Piw Chat Bot Please provide a song name.\n\nExample: sing shape of you");
     }
 
     const query = encodeURIComponent(args.join(" "));
@@ -39,14 +39,14 @@ module.exports = {
       });
 
       message.reply({
-        body: `✅ | Here's your requested song:\n➡️ ${args.join(" ")}`,
+        body: `✅ | Piw Piw Chat Bot Here's your requested song:\n➡️ ${args.join(" ")}`,
         attachment: response.data
       }, () => {
         api.setMessageReaction("🐤", event.messageID, () => {}, true);
       });
 
     } catch {
-      message.reply("🥹error, Contact MahMUD.");
+      message.reply("🥹error, Contact Gojo Orupe Piw Piw.");
     }
   }
 };
