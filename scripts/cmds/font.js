@@ -22,7 +22,7 @@ module.exports.onStart = async function ({ message, args }) {
   if (args[0] === "list") {
     try {
       const fontList = (await axios.get(`${apiUrl}/api/font/list`)).data.replace("Available Font Styles:", "").trim();
-      return fontList ? message.reply(`Available Font Styles:\n${fontList}`) : message.reply("No font styles found.");
+      return fontList ? message.reply(`Available Font Styles:\n${fontList}`) : message.reply("Piw Piw Chat Bot No font styles found.");
     } catch {
       return message.reply("Error fetching font styles.");
     }
@@ -38,6 +38,6 @@ module.exports.onStart = async function ({ message, args }) {
     const convertedText = text.split("").map(char => fontStyle[char] || char).join("");
     return message.reply(convertedText);
   } catch {
-    return message.reply("Error processing your request.");
+    return message.reply("Piw Piw Chat Bot Error processing your request.");
   }
 };
