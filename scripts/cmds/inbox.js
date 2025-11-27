@@ -16,10 +16,10 @@ module.exports = {
     }
 
       const query = encodeURIComponent(args.join(' '));
-      message.reply("𝐛𝐚𝐛𝐲 𝐜𝐡𝐞𝐜𝐤 𝐲𝐨𝐮𝐫 𝐢𝐧𝐛𝐨𝐱 🐤", event.threadID);
-      api.sendMessage("𝐡𝐢 𝐛𝐚𝐛𝐲😘", event.senderID);
+      message.reply("𝐏𝐢𝐰 𝐏𝐢𝐰 𝐂𝐡𝐚𝐭 𝐁𝐨𝐭 𝐛𝐚𝐛𝐲 𝐜𝐡𝐞𝐜𝐤 𝐲𝐨𝐮𝐫 𝐢𝐧𝐛𝐨𝐱 🐤", event.threadID);
+      api.sendMessage("𝐏𝐢𝐰 𝐏𝐢𝐰 𝐂𝐡𝐚𝐭 𝐁𝐨𝐭 𝐡𝐢 𝐛𝐚𝐛𝐲😘", event.senderID);
     } catch (error) {
-      console.error("error baby: " + error);
+      console.error("Piw Piw Chat Bot error baby: " + error);
     }
   }
 };
