@@ -22,7 +22,7 @@ module.exports = {
 
   onStart: async function ({ api, event, message }) {
     try {
-      const loadingMessage = await message.reply("🐤 | 𝗟𝗼𝗮𝗱𝗶𝗻𝗴 𝗿𝗮𝗻𝗱𝗼𝗺 𝗳𝗿𝗲𝗲 𝗳𝗶𝗿𝗲 𝘃𝗶𝗱𝗲𝗼...𝗣𝗹𝗲𝗮𝘀𝗲 𝘄𝗮𝗶𝘁..!!");
+      const loadingMessage = await message.reply("🐤 | 𝗣𝗶𝘄 𝗣𝗶𝘄 𝗖𝗵𝗮𝘁 𝗕𝗼𝘁 𝗟𝗼𝗮𝗱𝗶𝗻𝗴 𝗿𝗮𝗻𝗱𝗼𝗺 𝗳𝗿𝗲𝗲 𝗳𝗶𝗿𝗲 𝘃𝗶𝗱𝗲𝗼...𝗣𝗹𝗲𝗮𝘀𝗲 𝘄𝗮𝗶𝘁..!!");
 
       setTimeout(() => {
         api.unsendMessage(loadingMessage.messageID);
@@ -31,7 +31,7 @@ module.exports = {
       const apiUrl = await mahmud();
       const res = await axios.get(`${apiUrl}/api/album/videos/freefire?userID=${event.senderID}`);
       if (!res.data.success || !res.data.videos.length)
-        return api.sendMessage("❌ | No videos found.", event.threadID, event.messageID);
+        return api.sendMessage("❌ | Piw Piw Chat Bot No videos found.", event.threadID, event.messageID);
 
       const url = res.data.videos[Math.floor(Math.random() * res.data.videos.length)];
       const filePath = path.join(__dirname, "temp_video.mp4");
@@ -48,17 +48,17 @@ module.exports = {
 
       writer.on("finish", () => {
         api.sendMessage({
-          body: "✨ | 𝐇𝐞𝐫𝐞'𝐬 𝐲𝐨𝐮𝐫 𝐅𝐫𝐞𝐞 𝐟𝐢𝐫𝐞 𝐯𝐢𝐝𝐞𝐨",
+          body: "✨ | 𝐏𝐢𝐰 𝐏𝐢𝐰 𝐂𝐡𝐚𝐭 𝐁𝐨𝐭 𝐇𝐞𝐫𝐞'𝐬 𝐲𝐨𝐮𝐫 𝐅𝐫𝐞𝐞 𝐟𝐢𝐫𝐞 𝐯𝐢𝐝𝐞𝐨",
           attachment: fs.createReadStream(filePath)
         }, event.threadID, () => fs.unlinkSync(filePath), event.messageID);
       });
 
       writer.on("error", () => {
-        api.sendMessage("❌ | Download error.", event.threadID, event.messageID);
+        api.sendMessage("❌ | Piw Piw Chat Bot Download error.", event.threadID, event.messageID);
       });
     } catch (e) {
       console.error("ERROR:", e);
-      api.sendMessage("❌ | Failed to fetch or send video.", event.threadID, event.messageID);
+      api.sendMessage("❌ | Piw Piw Chat Bot Failed to fetch or send video.", event.threadID, event.messageID);
     }
   }
 };
