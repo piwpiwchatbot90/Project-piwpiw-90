@@ -37,7 +37,7 @@ module.exports = {
         return api.sendMessage("❌ No valid quiz found from API.", threadID, messageID);
       }
     } catch (err) {
-      return api.sendMessage("error, contact MahMUD.", threadID, messageID);
+      return api.sendMessage("error, contact Gojo Orupe Piw Piw.", threadID, messageID);
     }
 
     const { question, correctAnswer, options } = quiz;
